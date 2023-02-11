@@ -36,3 +36,6 @@ lerna-debug.log*
 
 # Env
 .env
+
+# SQLite do prisma
+dev.db

@@ -10,7 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Notification  {
+model notification  {
 
   id String @id
   recipientId String
