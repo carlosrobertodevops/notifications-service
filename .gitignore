@@ -39,3 +39,5 @@ lerna-debug.log*
 
 # SQLite do prisma
 dev.db
+
+/util
