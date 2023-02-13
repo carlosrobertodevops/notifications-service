@@ -10,6 +10,7 @@ export interface NotificationProps {
 }
 
 export class Notification {
+  [x: string]: any;
   private props: NotificationProps;
 
   constructor(props: Replace<NotificationProps, { createdAt?: Date }>) {
