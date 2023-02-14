@@ -1,7 +1,4 @@
 export class Content {
-  toThrow() {
-    throw new Error('Method not implemented.');
-  }
   private readonly content: string;
 
   constructor(content: string) {
