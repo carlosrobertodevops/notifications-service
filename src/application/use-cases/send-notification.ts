@@ -12,6 +12,8 @@ interface SendNotificationResponse {
 }
 
 export class SendNotification {
+  constructor(private nofiticationsRepository: NotificationsRepository) {}
+
   async execute(
     request: SendNotificationRequest,
   ): Promise<SendNotificationResponse> {
@@ -22,6 +24,8 @@ export class SendNotification {
       content: new Content(content),
       category,
     });
+
+    // Persistir esse notificação no banco
 
     return {
       notification,
