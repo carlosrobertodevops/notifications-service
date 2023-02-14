@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { AppController } from './app.controller';
+import { AppController } from './http/controllers/app.controller';
 import { PrismaService } from './prisma.service';
 
 describe('AppController', () => {
