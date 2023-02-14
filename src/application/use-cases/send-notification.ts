@@ -1,5 +1,6 @@
 import { Content } from '../entities/content';
 import { Notification } from '../entities/notification';
+import { NotificationsRepository } from '../repositories/notifications-repository';
 
 interface SendNotificationRequest {
   recipientId: string;
@@ -12,7 +13,7 @@ interface SendNotificationResponse {
 }
 
 export class SendNotification {
-  constructor(private nofiticationsRepository: NotificationsRepository) {}
+  constructor(private notificationsRepository: NotificationsRepository) {}
 
   async execute(
     request: SendNotificationRequest,
@@ -26,6 +27,7 @@ export class SendNotification {
     });
 
     // Persistir esse notificação no banco
+    await this.notificationsRepository.create(notification);
 
     return {
       notification,
