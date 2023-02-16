@@ -13,6 +13,7 @@
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
+    "resolveJsonModule": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "strictPropertyInitialization": false,
@@ -23,7 +24,7 @@
       "@helpers/*":["./src/helpers/*"],
       "@infra/*":["./src/infra/*"],
       "@database/*":["./src/infra/database/prisma/*"],
-      "@test/*":["./test/*"],
-    },
+      "@test/*":["./test/*"]
+    }
   }
 }
