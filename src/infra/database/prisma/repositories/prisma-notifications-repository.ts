@@ -7,6 +7,10 @@ import { PrismaService } from '../prisma.service';
 export class PrismaNotificationsRepository implements NotificationsRepository {
   constructor(private prismaService: PrismaService) {}
 
+  async findByIde(notificationId: string): Promise<Notification | null> {
+    throw new Error('Method not implemented');
+  }
+
   async create(notification: Notification): Promise<void> {
     await this.prismaService.notification.create({
       data: {
@@ -18,5 +22,9 @@ export class PrismaNotificationsRepository implements NotificationsRepository {
         createdAt: notification.createdAt,
       },
     });
+  }
+
+  async save(notification: Notification): Promise<void> {
+    throw new Error('Method not implemented');
   }
 }
